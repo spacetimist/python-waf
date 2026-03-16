@@ -1,0 +1,130 @@
+rules:
+  # ==========================================
+  # KATEGORI 1: Kata Kunci SQL Dasar
+  # Referensi CRS: 942100, 942140, 942160
+  # ==========================================
+  - id: "SQLI-001"
+    description: "Deteksi kata kunci SQL dasar (SELECT, UNION, INSERT, dll)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\b(select|union|insert|update|delete|drop|create|alter|exec|execute|truncate|replace)\\b"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "keywords", "crs-942100"]
+
+  - id: "SQLI-002"
+    description: "Deteksi UNION SELECT yang umum digunakan untuk ekstraksi data"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "union.{0,20}select"
+    transform: ["lowercase", "url_decode", "html_decode", "remove_whitespace"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "union", "crs-942100"]
+
+  # ==========================================
+  # KATEGORI 2: Komentar SQL
+  # Referensi CRS: 942130, 942150
+  # ==========================================
+  - id: "SQLI-003"
+    description: "Deteksi komentar SQL (--、#、/**/)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(--|#|/\\*|\\*/|/\\*!)"
+    transform: ["url_decode"]
+    severity: "high"
+    score: 3
+    tags: ["sqli", "comments", "crs-942130"]
+
+  - id: "SQLI-004"
+    description: "Deteksi inline comment untuk bypass filter"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "/\\*.*?\\*/"
+    transform: ["url_decode"]
+    severity: "high"
+    score: 3
+    tags: ["sqli", "comments", "crs-942150"]
+
+  # ==========================================
+  # KATEGORI 3: Tautologi dan Authentication Bypass
+  # Referensi CRS: 942120, 942160
+  # ==========================================
+  - id: "SQLI-005"
+    description: "Deteksi tautologi SQL (1=1, 'a'='a', OR 1=1)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(\\bor\\b.{0,10}=|\\band\\b.{0,10}=|'\\s*=\\s*'|\"\\s*=\\s*\"|1\\s*=\\s*1|'1'\\s*=\\s*'1')"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "tautology", "crs-942120"]
+
+  - id: "SQLI-006"
+    description: "Deteksi OR/AND injection untuk authentication bypass"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "'\\s*(or|and)\\s*'?\\s*\\w+\\s*'?\\s*(=|like|>|<)"
+    transform: ["lowercase", "url_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "auth-bypass", "crs-942160"]
+
+  # ==========================================
+  # KATEGORI 4: Time-Based Blind SQLi
+  # Referensi CRS: 942170, 942180
+  # ==========================================
+  - id: "SQLI-007"
+    description: "Deteksi fungsi delay untuk time-based blind SQLi (SLEEP, WAITFOR)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\b(sleep|waitfor\\s+delay|pg_sleep|benchmark)\\s*\\("
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "time-based", "crs-942170"]
+
+  - id: "SQLI-008"
+    description: "Deteksi fungsi database berbahaya (LOAD_FILE, INTO OUTFILE)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\b(load_file|into\\s+outfile|into\\s+dumpfile)\\b"
+    transform: ["lowercase", "url_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "file-ops", "crs-942180"]
+
+  # ==========================================
+  # KATEGORI 5: Karakter Khusus SQL
+  # Referensi CRS: 942190, 942200
+  # ==========================================
+  - id: "SQLI-009"
+    description: "Deteksi tanda kutip tunggal dan backslash mencurigakan"
+    phase: 2
+    target: ["args", "form", "query_string"]
+    operator: "regex"
+    pattern: "('|%27|\\\\x27).*(select|union|insert|update|delete|drop|or|and)"
+    transform: ["lowercase", "url_decode"]
+    severity: "high"
+    score: 3
+    tags: ["sqli", "special-chars", "crs-942190"]
+
+  - id: "SQLI-010"
+    description: "Deteksi stacked queries menggunakan titik koma"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: ";\\s*(select|insert|update|delete|drop|exec)"
+    transform: ["lowercase", "url_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "stacked-queries", "crs-942200"]

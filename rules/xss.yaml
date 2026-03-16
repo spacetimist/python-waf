@@ -1,0 +1,167 @@
+rules:
+  # ==========================================
+  # KATEGORI 1: Tag HTML Berbahaya
+  # Referensi CRS: 941100, 941110
+  # ==========================================
+  - id: "XSS-001"
+    description: "Deteksi tag script yang umum digunakan untuk XSS"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\s*script[\\s>]"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "script-tag", "crs-941100"]
+
+  - id: "XSS-002"
+    description: "Deteksi tag HTML berbahaya (iframe, object, embed, applet)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\s*(iframe|object|embed|applet|meta|base|form|input)[\\s>]"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "dangerous-tags", "crs-941110"]
+
+  - id: "XSS-003"
+    description: "Deteksi tag penutup script"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\s*/\\s*script\\s*>"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "script-tag", "crs-941100"]
+
+  # ==========================================
+  # KATEGORI 2: Event Handler JavaScript
+  # Referensi CRS: 941120, 941130
+  # ==========================================
+  - id: "XSS-004"
+    description: "Deteksi event handler JavaScript (onload, onerror, onclick, dll)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\bon(load|error|click|mouseover|mouseout|focus|blur|change|submit|reset|select|keydown|keyup|keypress|dblclick|contextmenu|drag|drop)\\s*="
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "event-handler", "crs-941120"]
+
+  - id: "XSS-005"
+    description: "Deteksi event handler lanjutan (onmouseenter, onanimation, dll)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\bon(mouse|animation|transition|pointer|touch|wheel|scroll|resize|before|after)\\w*\\s*="
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "event-handler", "crs-941130"]
+
+  # ==========================================
+  # KATEGORI 3: Protokol JavaScript
+  # Referensi CRS: 941140, 941150
+  # ==========================================
+  - id: "XSS-006"
+    description: "Deteksi protokol javascript: dalam atribut href atau src"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "javascript\\s*:"
+    transform: ["lowercase", "url_decode", "html_decode", "remove_whitespace"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "javascript-protocol", "crs-941140"]
+
+  - id: "XSS-007"
+    description: "Deteksi protokol vbscript dan data URI berbahaya"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(vbscript\\s*:|data\\s*:\\s*text/html)"
+    transform: ["lowercase", "url_decode", "html_decode", "remove_whitespace"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "dangerous-protocol", "crs-941150"]
+
+  # ==========================================
+  # KATEGORI 4: Encoding XSS
+  # Referensi CRS: 941160, 941170
+  # ==========================================
+  - id: "XSS-008"
+    description: "Deteksi HTML entity encoding untuk bypass filter (<, >)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(&lt;|&gt;|&amp;|&#x?[0-9a-f]+;).*(script|on\\w+=|javascript)"
+    transform: ["lowercase", "html_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "encoding-bypass", "crs-941160"]
+
+  - id: "XSS-009"
+    description: "Deteksi Unicode encoding untuk bypass filter"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(\\\\u00[3-7][0-9a-f]|%u00[3-7][0-9a-f]).{0,20}(script|javascript)"
+    transform: ["lowercase", "url_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "unicode-bypass", "crs-941170"]
+
+  # ==========================================
+  # KATEGORI 5: DOM-based XSS
+  # Referensi CRS: 941180, 941190
+  # ==========================================
+  - id: "XSS-010"
+    description: "Deteksi manipulasi DOM yang berbahaya"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(document\\.(write|writeln|cookie|location|referrer)|window\\.(location|open)|innerHTML|outerHTML)"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "dom-xss", "crs-941180"]
+
+  - id: "XSS-011"
+    description: "Deteksi eval dan fungsi eksekusi JavaScript berbahaya"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\b(eval|setTimeout|setInterval|Function|execScript)\\s*\\("
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "js-execution", "crs-941190"]
+
+  # ==========================================
+  # KATEGORI 6: Polyglot XSS
+  # Referensi CRS: 941200, 941210
+  # ==========================================
+  - id: "XSS-012"
+    description: "Deteksi payload polyglot XSS yang umum digunakan"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(\"|')(\\s*>|\\s*/>|\\s+\\w+=).{0,30}(script|javascript|on\\w+=)"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "polyglot", "crs-941200"]
+
+  - id: "XSS-013"
+    description: "Deteksi XSS melalui atribut src dan href yang berbahaya"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(src|href|action|formaction|xlink:href)\\s*=\\s*['\"]?\\s*(javascript|vbscript|data\\s*:)"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "attribute-injection", "crs-941210"]

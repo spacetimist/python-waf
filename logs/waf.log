@@ -1,0 +1,3 @@
+2026-03-05 10:29:35,374 - INFO - Ruleset dimuat: 0 aturan SQLi, 0 aturan XSS.
+2026-03-05 10:30:21,248 - INFO - {"timestamp": "2026-03-05T03:30:21.248142Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-05 10:30:23,840 - INFO - {"timestamp": "2026-03-05T03:30:23.839029Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/favicon.ico", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}

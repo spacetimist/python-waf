@@ -1,0 +1,19 @@
+server:
+  host: "0.0.0.0"
+  port: 8000
+  mode: "block"           # "block" atau "detect"
+
+backend:
+  host: "127.0.0.1"
+  port: 80
+
+detection:
+  threshold: 5            # skor minimum untuk blokir
+
+rules:
+  sqli: "rules/sqli.yaml"
+  xss: "rules/xss.yaml"
+
+logging:
+  path: "logs/waf.log"
+  level: "INFO"
