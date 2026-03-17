@@ -1,6 +1,6 @@
 import time
 import yaml
-from flask import Flask, request, Response
+from flask import Flask, request, Response, make_response
 
 from src.logger import setup_logger, log_request
 from src.analyzer import analyze_request, get_check_targets
@@ -83,20 +83,45 @@ def create_app(config_path: str = "config/config.yaml") -> Flask:
         # teruskan ke backend jika diizinkan
         result = forward_request(request, backend_host, backend_port)
 
+        # debug sementara
+        logger.debug(f"Backend status: {result['status_code']}")
+        logger.debug(f"Backend headers: {result['headers']}")
+        logger.debug(f"Request form data: {dict(request.form)}")
+        logger.debug(f"Request cookies: {dict(request.cookies)}")
+
         # buang header yang bisa konflik sebelum dikembalikan ke client
         excluded_headers = [
-            "content-encoding", "transfer-encoding",
-            "connection", "content-length"
+        "content-encoding", "transfer-encoding",
+        "connection", "content-length", "keep-alive"
         ]
         response_headers = {
             k: v for k, v in result["headers"].items()
             if k.lower() not in excluded_headers
         }
 
-        return Response(
-            response=result["content"],
-            status=result["status_code"],
-            headers=response_headers
-        )
+        # ganti URL backend di header Location dengan URL WAF
+        if "Location" in response_headers:
+            response_headers["Location"] = response_headers["Location"].replace(
+                f"http://{backend_host}:{backend_port}",
+                "http://localhost:8000"
+            ).replace(
+                f"http://{backend_host}",
+                "http://localhost:8000"
+            )
+
+        resp = make_response(result["content"], result["status_code"])
+        for k, v in response_headers.items():
+            if k.lower() == "set-cookie":
+                # hapus SameSite supaya cookie bisa diterima browser
+                v = v.replace("; SameSite=Strict", "")
+                v = v.replace("; SameSite=Lax", "")
+                # paksa security level ke low
+                if "security=" in v:
+                    import re
+                    v = re.sub(r"security=\w+", "security=low", v)
+                resp.headers.add(k, v)
+            else:
+                resp.headers[k] = v
+        return resp
 
     return app

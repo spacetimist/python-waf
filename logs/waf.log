@@ -11,3 +11,451 @@
 2026-03-16 16:42:22,070 - INFO - {"timestamp": "2026-03-16T09:42:22.070685Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/favicon.ico", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.975}
 2026-03-16 16:42:58,000 - INFO - {"timestamp": "2026-03-16T09:42:58.000406Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/test", "triggered_rules": [{"id": "XSS-001", "description": "Deteksi tag script yang umum digunakan untuk XSS", "severity": "critical", "score": 5, "tags": ["xss", "script-tag", "crs-941100"]}, {"id": "XSS-003", "description": "Deteksi tag penutup script", "severity": "high", "score": 3, "tags": ["xss", "script-tag", "crs-941100"]}], "total_score": 8, "decision": "blocked", "latency_ms": 0.981}
 2026-03-16 16:43:12,054 - INFO - {"timestamp": "2026-03-16T09:43:12.054677Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/test", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 13:44:10,273 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 13:44:43,796 - INFO - {"timestamp": "2026-03-17T06:44:43.796952Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 13:44:43,901 - INFO - {"timestamp": "2026-03-17T06:44:43.901424Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/dvwa/css/login.css", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 13:44:44,040 - INFO - {"timestamp": "2026-03-17T06:44:44.040602Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/dvwa/images/login_logo.png", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 13:44:44,764 - INFO - {"timestamp": "2026-03-17T06:44:44.764359Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/favicon.ico", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 13:44:46,806 - INFO - {"timestamp": "2026-03-17T06:44:46.806229Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.975}
+2026-03-17 13:44:50,031 - INFO - {"timestamp": "2026-03-17T06:44:50.031733Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 13:45:04,158 - INFO - {"timestamp": "2026-03-17T06:45:04.158983Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.982}
+2026-03-17 13:45:05,889 - INFO - {"timestamp": "2026-03-17T06:45:05.889234Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.972}
+2026-03-17 13:52:39,524 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 13:52:52,836 - INFO - {"timestamp": "2026-03-17T06:52:52.836023Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 13:52:55,544 - INFO - {"timestamp": "2026-03-17T06:52:55.544144Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 13:53:28,324 - INFO - {"timestamp": "2026-03-17T06:53:28.324105Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 13:57:29,117 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 13:57:40,702 - INFO - {"timestamp": "2026-03-17T06:57:40.702141Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.974}
+2026-03-17 13:57:44,412 - INFO - {"timestamp": "2026-03-17T06:57:44.412598Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 1.952}
+2026-03-17 13:57:45,882 - INFO - {"timestamp": "2026-03-17T06:57:45.882325Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.976}
+2026-03-17 13:57:59,322 - INFO - {"timestamp": "2026-03-17T06:57:59.322247Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.979}
+2026-03-17 14:01:40,155 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 14:01:49,299 - INFO - {"timestamp": "2026-03-17T07:01:49.299366Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:01:49,316 - DEBUG - Backend status: 200
+2026-03-17 14:01:49,316 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:00:05 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Content-Length': '604', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:01:52,773 - INFO - {"timestamp": "2026-03-17T07:01:52.773415Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.969}
+2026-03-17 14:01:52,788 - DEBUG - Backend status: 200
+2026-03-17 14:01:52,789 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:00:09 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Content-Length': '604', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:11:06,757 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 14:11:17,341 - INFO - {"timestamp": "2026-03-17T07:11:17.341634Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:11:17,364 - DEBUG - Backend status: 200
+2026-03-17 14:11:17,365 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:09:34 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Content-Length': '606', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:11:29,019 - INFO - {"timestamp": "2026-03-17T07:11:29.019806Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.982}
+2026-03-17 14:11:29,035 - DEBUG - Backend status: 200
+2026-03-17 14:11:29,036 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:09:45 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Content-Length': '606', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:11:31,404 - INFO - {"timestamp": "2026-03-17T07:11:31.404879Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.978}
+2026-03-17 14:11:31,420 - DEBUG - Backend status: 200
+2026-03-17 14:11:31,422 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:09:48 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Content-Length': '604', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:11:58,443 - INFO - {"timestamp": "2026-03-17T07:11:58.443408Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 2.911}
+2026-03-17 14:11:58,458 - DEBUG - Backend status: 200
+2026-03-17 14:11:58,460 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:10:15 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Content-Length': '606', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:14:47,066 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 14:14:54,712 - INFO - {"timestamp": "2026-03-17T07:14:54.712542Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:14:54,726 - DEBUG - Backend status: 200
+2026-03-17 14:14:54,727 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:13:11 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:14:56,723 - INFO - {"timestamp": "2026-03-17T07:14:56.723788Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 1.004}
+2026-03-17 14:14:56,735 - DEBUG - Backend status: 200
+2026-03-17 14:14:56,740 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:13:13 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:18:20,868 - INFO - {"timestamp": "2026-03-17T07:18:20.867530Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:18:20,879 - DEBUG - Backend status: 200
+2026-03-17 14:18:20,879 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:16:37 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=qllcig28m42sgbmu2legag7qo8; expires=Wed, 18-Mar-2026 07:16:37 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=irjdo06q1m0a0a63sujpdqmemi; expires=Wed, 18-Mar-2026 07:16:37 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:19:16,733 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 14:19:44,958 - INFO - {"timestamp": "2026-03-17T07:19:44.958965Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 1.013}
+2026-03-17 14:19:44,971 - DEBUG - Backend status: 200
+2026-03-17 14:19:44,972 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:18:01 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:19:46,399 - INFO - {"timestamp": "2026-03-17T07:19:46.399133Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:19:46,411 - DEBUG - Backend status: 200
+2026-03-17 14:19:46,412 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:18:03 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:21:16,562 - INFO - {"timestamp": "2026-03-17T07:21:16.562603Z", "src_ip": "192.168.1.174", "method": "GET", "uri": "/", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.976}
+2026-03-17 14:21:16,584 - DEBUG - Backend status: 200
+2026-03-17 14:21:16,587 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:19:33 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Last-Modified': 'Mon, 16 Mar 2026 11:05:59 GMT', 'ETag': '"29af-64d223421d030"', 'Accept-Ranges': 'bytes', 'Content-Length': '10671', 'Vary': 'Accept-Encoding', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html'}
+2026-03-17 14:21:16,632 - INFO - {"timestamp": "2026-03-17T07:21:16.632005Z", "src_ip": "192.168.1.174", "method": "GET", "uri": "/icons/ubuntu-logo.png", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:21:16,654 - DEBUG - Backend status: 200
+2026-03-17 14:21:16,657 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:19:33 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Last-Modified': 'Thu, 05 Mar 2026 18:04:29 GMT', 'ETag': '"cfa-64c4ac48b0540"', 'Accept-Ranges': 'bytes', 'Content-Length': '3322', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'image/png'}
+2026-03-17 14:21:17,295 - INFO - {"timestamp": "2026-03-17T07:21:17.295443Z", "src_ip": "192.168.1.174", "method": "GET", "uri": "/favicon.ico", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.951}
+2026-03-17 14:21:17,304 - DEBUG - Backend status: 404
+2026-03-17 14:21:17,307 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:19:34 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:29:27,849 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 14:29:34,770 - INFO - {"timestamp": "2026-03-17T07:29:34.770899Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 1.013}
+2026-03-17 14:29:34,785 - DEBUG - Backend status: 200
+2026-03-17 14:29:34,785 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:27:52 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:29:34,787 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '8e6c5baf5a56ce959b9b21dd3e4a4d1a'}
+2026-03-17 14:29:34,788 - DEBUG - Request cookies: {'sidebar_pinned': 'false', 'csrftoken': '7YxW21DOua8hS6EACjHvGkLPXF0NVoxQ2g9iXPdlBpbaQMMVkOkuvCHJPIl0tnVw', 'security': 'impossible', 'PHPSESSID': 'av20mo35ul1ucq9v53u5oqc3bt'}
+2026-03-17 14:29:36,660 - INFO - {"timestamp": "2026-03-17T07:29:36.660084Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:29:36,674 - DEBUG - Backend status: 200
+2026-03-17 14:29:36,679 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:27:53 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:29:36,680 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '08ddcf19cdf3cae0dfe16e91fd80ccc8'}
+2026-03-17 14:29:36,682 - DEBUG - Request cookies: {'sidebar_pinned': 'false', 'csrftoken': '7YxW21DOua8hS6EACjHvGkLPXF0NVoxQ2g9iXPdlBpbaQMMVkOkuvCHJPIl0tnVw', 'security': 'impossible', 'PHPSESSID': 'av20mo35ul1ucq9v53u5oqc3bt'}
+2026-03-17 14:31:06,716 - INFO - {"timestamp": "2026-03-17T07:31:06.716476Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.973}
+2026-03-17 14:31:06,730 - DEBUG - Backend status: 404
+2026-03-17 14:31:06,760 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:29:24 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:31:06,765 - DEBUG - Request form data: {}
+2026-03-17 14:31:06,774 - DEBUG - Request cookies: {'sidebar_pinned': 'false', 'csrftoken': '7YxW21DOua8hS6EACjHvGkLPXF0NVoxQ2g9iXPdlBpbaQMMVkOkuvCHJPIl0tnVw', 'security': 'impossible', 'PHPSESSID': 'av20mo35ul1ucq9v53u5oqc3bt'}
+2026-03-17 14:32:22,410 - INFO - {"timestamp": "2026-03-17T07:32:22.410988Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.959}
+2026-03-17 14:32:22,420 - DEBUG - Backend status: 404
+2026-03-17 14:32:22,447 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:30:39 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:32:22,448 - DEBUG - Request form data: {}
+2026-03-17 14:32:22,449 - DEBUG - Request cookies: {'sidebar_pinned': 'false', 'csrftoken': '7YxW21DOua8hS6EACjHvGkLPXF0NVoxQ2g9iXPdlBpbaQMMVkOkuvCHJPIl0tnVw', 'security': 'impossible', 'PHPSESSID': 'av20mo35ul1ucq9v53u5oqc3bt'}
+2026-03-17 14:33:24,832 - INFO - {"timestamp": "2026-03-17T07:33:24.831792Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:33:24,855 - DEBUG - Backend status: 200
+2026-03-17 14:33:24,863 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:31:42 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=g99dg7pbbi1vj6vje6182a2sak; expires=Wed, 18-Mar-2026 07:31:42 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=044ecmmm7e8smls7skoo402e4i; expires=Wed, 18-Mar-2026 07:31:42 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:33:24,879 - DEBUG - Request form data: {}
+2026-03-17 14:33:24,889 - DEBUG - Request cookies: {'csrftoken': 'tOoiPbFrec8lTx64sgn56XEhu1SDuXT6KtAMPVKCeYfIdFljochvk4rilhGege3j', 'sidebar_pinned': 'false'}
+2026-03-17 14:33:25,262 - INFO - {"timestamp": "2026-03-17T07:33:25.262685Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/dvwa/css/login.css", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 2.484}
+2026-03-17 14:33:25,271 - DEBUG - Backend status: 200
+2026-03-17 14:33:25,272 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:31:42 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Last-Modified': 'Mon, 16 Mar 2026 11:30:04 GMT', 'ETag': '"34a-64d228a4d3c63"', 'Accept-Ranges': 'bytes', 'Content-Length': '842', 'Vary': 'Accept-Encoding', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/css'}
+2026-03-17 14:33:25,274 - DEBUG - Request form data: {}
+2026-03-17 14:33:25,275 - DEBUG - Request cookies: {'csrftoken': 'tOoiPbFrec8lTx64sgn56XEhu1SDuXT6KtAMPVKCeYfIdFljochvk4rilhGege3j', 'sidebar_pinned': 'false', 'security': 'impossible'}
+2026-03-17 14:33:25,289 - INFO - {"timestamp": "2026-03-17T07:33:25.289043Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/dvwa/images/login_logo.png", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.979}
+2026-03-17 14:33:25,312 - DEBUG - Backend status: 200
+2026-03-17 14:33:25,313 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:31:42 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Last-Modified': 'Mon, 16 Mar 2026 11:30:04 GMT', 'ETag': '"2380-64d228a4d404b"', 'Accept-Ranges': 'bytes', 'Content-Length': '9088', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'image/png'}
+2026-03-17 14:33:25,319 - DEBUG - Request form data: {}
+2026-03-17 14:33:25,321 - DEBUG - Request cookies: {'csrftoken': 'tOoiPbFrec8lTx64sgn56XEhu1SDuXT6KtAMPVKCeYfIdFljochvk4rilhGege3j', 'sidebar_pinned': 'false', 'security': 'impossible'}
+2026-03-17 14:33:25,378 - INFO - {"timestamp": "2026-03-17T07:33:25.378879Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/favicon.ico", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.976}
+2026-03-17 14:33:25,441 - DEBUG - Backend status: 404
+2026-03-17 14:33:25,456 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:31:42 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:33:25,458 - DEBUG - Request form data: {}
+2026-03-17 14:33:25,459 - DEBUG - Request cookies: {'csrftoken': 'tOoiPbFrec8lTx64sgn56XEhu1SDuXT6KtAMPVKCeYfIdFljochvk4rilhGege3j', 'sidebar_pinned': 'false', 'security': 'impossible'}
+2026-03-17 14:34:10,124 - INFO - {"timestamp": "2026-03-17T07:34:10.124348Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.983}
+2026-03-17 14:34:10,138 - DEBUG - Backend status: 200
+2026-03-17 14:34:10,141 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:32:27 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=b5rds83id5gt4rbki5l3re1k7k; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:34:10,142 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'd2e5e1dc4927982bcff66b25365538f1'}
+2026-03-17 14:34:10,143 - DEBUG - Request cookies: {'csrftoken': 'tOoiPbFrec8lTx64sgn56XEhu1SDuXT6KtAMPVKCeYfIdFljochvk4rilhGege3j', 'sidebar_pinned': 'false', 'security': 'impossible'}
+2026-03-17 14:35:30,921 - INFO - {"timestamp": "2026-03-17T07:35:30.921665Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.96}
+2026-03-17 14:35:30,945 - DEBUG - Backend status: 200
+2026-03-17 14:35:30,945 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:33:48 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=fv8b712ir2av1mletb69r6lh5p; expires=Wed, 18-Mar-2026 07:33:48 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=bce62qsletbqmhakp04sttdqnt; expires=Wed, 18-Mar-2026 07:33:48 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:35:30,947 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '08ddcf19cdf3cae0dfe16e91fd80ccc8'}
+2026-03-17 14:35:30,947 - DEBUG - Request cookies: {}
+2026-03-17 14:35:31,317 - INFO - {"timestamp": "2026-03-17T07:35:31.316534Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:35:31,339 - DEBUG - Backend status: 404
+2026-03-17 14:35:31,379 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:33:48 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:35:31,412 - DEBUG - Request form data: {}
+2026-03-17 14:35:31,412 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:35:41,864 - INFO - {"timestamp": "2026-03-17T07:35:41.864289Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.975}
+2026-03-17 14:35:41,881 - DEBUG - Backend status: 200
+2026-03-17 14:35:41,881 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:33:59 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=mfcte1kmr2ongu1rhqfmf54040; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:35:41,889 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'e8b23d592a08731b1eae16fcce68eac1'}
+2026-03-17 14:35:41,890 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:35:42,166 - INFO - {"timestamp": "2026-03-17T07:35:42.166930Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.975}
+2026-03-17 14:35:42,175 - DEBUG - Backend status: 404
+2026-03-17 14:35:42,177 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:33:59 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:35:42,179 - DEBUG - Request form data: {}
+2026-03-17 14:35:42,180 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'mfcte1kmr2ongu1rhqfmf54040'}
+2026-03-17 14:36:28,310 - INFO - {"timestamp": "2026-03-17T07:36:28.310140Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:36:28,316 - DEBUG - Backend status: 200
+2026-03-17 14:36:28,316 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:34:45 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:36:28,319 - DEBUG - Request form data: {'username': 'user', 'password': 'password', 'Login': 'Login', 'user_token': '5e79137ebf4901c3729e4a85c807c2d9'}
+2026-03-17 14:36:28,319 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'mfcte1kmr2ongu1rhqfmf54040'}
+2026-03-17 14:36:28,424 - INFO - {"timestamp": "2026-03-17T07:36:28.424395Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.979}
+2026-03-17 14:36:28,437 - DEBUG - Backend status: 404
+2026-03-17 14:36:28,446 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:34:45 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:36:28,447 - DEBUG - Request form data: {}
+2026-03-17 14:36:28,447 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'mfcte1kmr2ongu1rhqfmf54040'}
+2026-03-17 14:37:13,121 - INFO - {"timestamp": "2026-03-17T07:37:13.121818Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.981}
+2026-03-17 14:37:13,141 - DEBUG - Backend status: 200
+2026-03-17 14:37:13,142 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:35:30 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=2fq87nruq63losaff9rffc52og; expires=Wed, 18-Mar-2026 07:35:30 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=2tqp56vedcpp4ae4a3t9jl6u6r; expires=Wed, 18-Mar-2026 07:35:30 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:37:13,145 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'ef1f68fd3d0419be5a7e035e3543a42e'}
+2026-03-17 14:37:13,152 - DEBUG - Request cookies: {}
+2026-03-17 14:37:13,429 - INFO - {"timestamp": "2026-03-17T07:37:13.429222Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.529}
+2026-03-17 14:37:13,458 - DEBUG - Backend status: 404
+2026-03-17 14:37:13,461 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:35:30 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:37:13,463 - DEBUG - Request form data: {}
+2026-03-17 14:37:13,463 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:39:28,349 - INFO - {"timestamp": "2026-03-17T07:39:28.349233Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.977}
+2026-03-17 14:39:28,360 - DEBUG - Backend status: 200
+2026-03-17 14:39:28,361 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:37:45 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=ki7d9d0dtpc2htl9aqr962o791; expires=Wed, 18-Mar-2026 07:37:45 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=hb6hnnq8imm14df4tcbbsfjruu; expires=Wed, 18-Mar-2026 07:37:45 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:39:28,363 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'ef1f68fd3d0419be5a7e035e3543a42e'}
+2026-03-17 14:39:28,364 - DEBUG - Request cookies: {}
+2026-03-17 14:39:28,465 - INFO - {"timestamp": "2026-03-17T07:39:28.464140Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:39:28,475 - DEBUG - Backend status: 404
+2026-03-17 14:39:28,550 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:37:46 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:39:28,561 - DEBUG - Request form data: {}
+2026-03-17 14:39:28,680 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:39:33,884 - INFO - {"timestamp": "2026-03-17T07:39:33.884181Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 1.944}
+2026-03-17 14:39:33,906 - DEBUG - Backend status: 200
+2026-03-17 14:39:33,906 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:37:51 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=4dui1rqhcfi2el0eg1g4oa1gu6; expires=Wed, 18-Mar-2026 07:37:51 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=03e97cicrrkj7aiob8q7gd82ik; expires=Wed, 18-Mar-2026 07:37:51 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:39:33,909 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'ef1f68fd3d0419be5a7e035e3543a42e'}
+2026-03-17 14:39:33,909 - DEBUG - Request cookies: {}
+2026-03-17 14:39:34,188 - INFO - {"timestamp": "2026-03-17T07:39:34.188955Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.955}
+2026-03-17 14:39:34,211 - DEBUG - Backend status: 404
+2026-03-17 14:39:34,215 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:37:51 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:39:34,217 - DEBUG - Request form data: {}
+2026-03-17 14:39:34,218 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:39:42,603 - INFO - {"timestamp": "2026-03-17T07:39:42.603057Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:39:42,621 - DEBUG - Backend status: 200
+2026-03-17 14:39:42,622 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:38:00 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=ltagobpvurg19mnmq7p523mm5r; expires=Wed, 18-Mar-2026 07:38:00 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=eeqlkdq8e6tjk7giefp1qj971l; expires=Wed, 18-Mar-2026 07:38:00 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:39:42,623 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '4374b2c4ec92391dfec62ed21b4f8419'}
+2026-03-17 14:39:42,624 - DEBUG - Request cookies: {}
+2026-03-17 14:39:42,736 - INFO - {"timestamp": "2026-03-17T07:39:42.736054Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.976}
+2026-03-17 14:39:42,748 - DEBUG - Backend status: 404
+2026-03-17 14:39:42,785 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:38:00 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:39:42,787 - DEBUG - Request form data: {}
+2026-03-17 14:39:42,830 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:47:54,866 - INFO - {"timestamp": "2026-03-17T07:47:54.866619Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:47:54,883 - DEBUG - Backend status: 200
+2026-03-17 14:47:54,884 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:46:12 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=hq1cijjm7ocdq73o6jkbk5d3ik; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:47:54,885 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '4374b2c4ec92391dfec62ed21b4f8419'}
+2026-03-17 14:47:54,886 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:47:55,017 - INFO - {"timestamp": "2026-03-17T07:47:55.017390Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:47:55,031 - DEBUG - Backend status: 404
+2026-03-17 14:47:55,033 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:46:12 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:47:55,093 - DEBUG - Request form data: {}
+2026-03-17 14:47:55,096 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'hq1cijjm7ocdq73o6jkbk5d3ik'}
+2026-03-17 14:48:02,475 - INFO - {"timestamp": "2026-03-17T07:48:02.475779Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:48:02,491 - DEBUG - Backend status: 200
+2026-03-17 14:48:02,493 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:46:20 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:48:02,494 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '6dce8228f4d5f7f17f0052ae17b8a831'}
+2026-03-17 14:48:02,495 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'hq1cijjm7ocdq73o6jkbk5d3ik'}
+2026-03-17 14:48:13,128 - INFO - {"timestamp": "2026-03-17T07:48:13.128095Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.977}
+2026-03-17 14:48:13,140 - DEBUG - Backend status: 404
+2026-03-17 14:48:13,146 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:46:30 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:48:13,156 - DEBUG - Request form data: {}
+2026-03-17 14:48:13,157 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'hq1cijjm7ocdq73o6jkbk5d3ik'}
+2026-03-17 14:48:29,078 - INFO - {"timestamp": "2026-03-17T07:48:29.078266Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.979}
+2026-03-17 14:48:29,102 - DEBUG - Backend status: 200
+2026-03-17 14:48:29,102 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:46:46 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=s6poun8iedakjlesiaeta952lb; expires=Wed, 18-Mar-2026 07:46:46 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=jgib52rdj8ojm7u221hontupk9; expires=Wed, 18-Mar-2026 07:46:46 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:48:29,104 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '6dce8228f4d5f7f17f0052ae17b8a831'}
+2026-03-17 14:48:29,105 - DEBUG - Request cookies: {}
+2026-03-17 14:48:29,211 - INFO - {"timestamp": "2026-03-17T07:48:29.211907Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:48:29,221 - DEBUG - Backend status: 404
+2026-03-17 14:48:29,223 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:46:47 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:48:29,311 - DEBUG - Request form data: {}
+2026-03-17 14:48:29,333 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:48:32,331 - INFO - {"timestamp": "2026-03-17T07:48:32.331397Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.969}
+2026-03-17 14:48:32,350 - DEBUG - Backend status: 200
+2026-03-17 14:48:32,351 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:46:50 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=mnolbvgueknvd4l286aso8ukol; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:48:32,358 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '6b5a5d87c47eed269087bc131e0b714d'}
+2026-03-17 14:48:32,359 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:48:32,639 - INFO - {"timestamp": "2026-03-17T07:48:32.639277Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.977}
+2026-03-17 14:48:32,650 - DEBUG - Backend status: 404
+2026-03-17 14:48:32,655 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:46:50 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:48:32,656 - DEBUG - Request form data: {}
+2026-03-17 14:48:32,657 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'mnolbvgueknvd4l286aso8ukol'}
+2026-03-17 14:49:39,134 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 14:49:46,420 - INFO - {"timestamp": "2026-03-17T07:49:46.420426Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.975}
+2026-03-17 14:49:46,444 - DEBUG - Backend status: 200
+2026-03-17 14:49:46,464 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:48:04 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:49:46,465 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '6b5a5d87c47eed269087bc131e0b714d'}
+2026-03-17 14:49:46,466 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'mnolbvgueknvd4l286aso8ukol'}
+2026-03-17 14:49:46,602 - INFO - {"timestamp": "2026-03-17T07:49:46.602892Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:49:46,618 - DEBUG - Backend status: 404
+2026-03-17 14:49:46,679 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:48:04 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:49:46,731 - DEBUG - Request form data: {}
+2026-03-17 14:49:46,768 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'mnolbvgueknvd4l286aso8ukol'}
+2026-03-17 14:49:53,621 - INFO - {"timestamp": "2026-03-17T07:49:53.621787Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.983}
+2026-03-17 14:49:53,647 - DEBUG - Backend status: 200
+2026-03-17 14:49:53,649 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:48:11 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=7jlrqhmcoij8aeqrccfvuc8361; expires=Wed, 18-Mar-2026 07:48:11 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=qtm66171g5vueerimvrgktcnnf; expires=Wed, 18-Mar-2026 07:48:11 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:49:53,654 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'c79a7a6085a90d4aab162998a276ca59'}
+2026-03-17 14:49:53,661 - DEBUG - Request cookies: {}
+2026-03-17 14:49:53,927 - INFO - {"timestamp": "2026-03-17T07:49:53.927216Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.971}
+2026-03-17 14:49:53,945 - DEBUG - Backend status: 404
+2026-03-17 14:49:53,945 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:48:11 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:49:53,947 - DEBUG - Request form data: {}
+2026-03-17 14:49:53,947 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:51:51,071 - INFO - {"timestamp": "2026-03-17T07:51:51.070342Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 1.012}
+2026-03-17 14:51:51,097 - DEBUG - Backend status: 200
+2026-03-17 14:51:51,097 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:50:09 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=kqdiac28v99p40te6u490o9j2e; expires=Wed, 18-Mar-2026 07:50:09 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=pvdcb21untn1fts96i5dgn76ju; expires=Wed, 18-Mar-2026 07:50:09 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:51:51,103 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'c79a7a6085a90d4aab162998a276ca59'}
+2026-03-17 14:51:51,104 - DEBUG - Request cookies: {}
+2026-03-17 14:51:51,232 - INFO - {"timestamp": "2026-03-17T07:51:51.232126Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.96}
+2026-03-17 14:51:51,245 - DEBUG - Backend status: 404
+2026-03-17 14:51:51,286 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:50:09 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:51:51,359 - DEBUG - Request form data: {}
+2026-03-17 14:51:51,375 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:51:53,147 - INFO - {"timestamp": "2026-03-17T07:51:53.147162Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.98}
+2026-03-17 14:51:53,164 - DEBUG - Backend status: 200
+2026-03-17 14:51:53,165 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:50:11 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=it0f5puu3c9d759k1hfhjvchf4; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:51:53,166 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '4d21078b87b3df4baf20e650d38bb21d'}
+2026-03-17 14:51:53,167 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:51:53,453 - INFO - {"timestamp": "2026-03-17T07:51:53.453225Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:51:53,466 - DEBUG - Backend status: 404
+2026-03-17 14:51:53,468 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:50:11 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:51:53,470 - DEBUG - Request form data: {}
+2026-03-17 14:51:53,470 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'it0f5puu3c9d759k1hfhjvchf4'}
+2026-03-17 14:53:04,952 - INFO - {"timestamp": "2026-03-17T07:53:04.952178Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:53:04,967 - DEBUG - Backend status: 200
+2026-03-17 14:53:04,967 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:51:22 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=359lq4hs0pr7aeesm6beusbnbg; expires=Wed, 18-Mar-2026 07:51:22 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=dq6b44orghmpccvkaucaptjg2g; expires=Wed, 18-Mar-2026 07:51:22 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:53:04,969 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'faaa854fff2334aa76822457a1f7752d'}
+2026-03-17 14:53:04,971 - DEBUG - Request cookies: {}
+2026-03-17 14:53:05,062 - INFO - {"timestamp": "2026-03-17T07:53:05.062420Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:53:05,095 - DEBUG - Backend status: 404
+2026-03-17 14:53:05,124 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:51:23 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:53:05,130 - DEBUG - Request form data: {}
+2026-03-17 14:53:05,169 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:53:06,907 - INFO - {"timestamp": "2026-03-17T07:53:06.907504Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:53:06,925 - DEBUG - Backend status: 200
+2026-03-17 14:53:06,926 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:51:24 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=jqg1pao3ae5v8t61jo9jd03h9k; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:53:06,935 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'faaa854fff2334aa76822457a1f7752d'}
+2026-03-17 14:53:06,936 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:53:07,208 - INFO - {"timestamp": "2026-03-17T07:53:07.208593Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:53:07,230 - DEBUG - Backend status: 404
+2026-03-17 14:53:07,231 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:51:25 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:53:07,232 - DEBUG - Request form data: {}
+2026-03-17 14:53:07,232 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'jqg1pao3ae5v8t61jo9jd03h9k'}
+2026-03-17 14:53:12,843 - INFO - {"timestamp": "2026-03-17T07:53:12.843129Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.976}
+2026-03-17 14:53:12,856 - DEBUG - Backend status: 200
+2026-03-17 14:53:12,857 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:51:30 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=75t306s77sveo70uj6iot1ma61; expires=Wed, 18-Mar-2026 07:51:30 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=074dd4uh6fkansj257otmk47ep; expires=Wed, 18-Mar-2026 07:51:30 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:53:12,858 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '16b790a8537194e7c48e7f1c0122d6b1'}
+2026-03-17 14:53:12,858 - DEBUG - Request cookies: {}
+2026-03-17 14:53:12,959 - INFO - {"timestamp": "2026-03-17T07:53:12.959481Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.979}
+2026-03-17 14:53:12,975 - DEBUG - Backend status: 404
+2026-03-17 14:53:13,006 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:51:30 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:53:13,008 - DEBUG - Request form data: {}
+2026-03-17 14:53:13,009 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:53:51,112 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 14:53:58,546 - INFO - {"timestamp": "2026-03-17T07:53:58.545272Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:53:58,570 - DEBUG - Backend status: 200
+2026-03-17 14:53:58,573 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:52:16 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=sm2g6i40dahkm8hl9ddllalni1; expires=Wed, 18-Mar-2026 07:52:16 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=v5er5n083j9vtfhkgmaqc0glrq; expires=Wed, 18-Mar-2026 07:52:16 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:53:58,576 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '16b790a8537194e7c48e7f1c0122d6b1'}
+2026-03-17 14:53:58,577 - DEBUG - Request cookies: {}
+2026-03-17 14:53:58,680 - INFO - {"timestamp": "2026-03-17T07:53:58.680505Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.982}
+2026-03-17 14:53:58,712 - DEBUG - Backend status: 404
+2026-03-17 14:53:58,809 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:52:16 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:53:58,824 - DEBUG - Request form data: {}
+2026-03-17 14:53:58,827 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:54:01,526 - INFO - {"timestamp": "2026-03-17T07:54:01.526371Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:54:01,550 - DEBUG - Backend status: 200
+2026-03-17 14:54:01,550 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:52:19 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=hqvqd4q10p28jephqitddvav7s; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:54:01,552 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'ef0ce48c2e8e48ae96e4bc2c8e2a7cc1'}
+2026-03-17 14:54:01,552 - DEBUG - Request cookies: {'security': 'impossible'}
+2026-03-17 14:54:01,834 - INFO - {"timestamp": "2026-03-17T07:54:01.834015Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:54:01,852 - DEBUG - Backend status: 404
+2026-03-17 14:54:01,857 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:52:19 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:54:01,859 - DEBUG - Request form data: {}
+2026-03-17 14:54:01,859 - DEBUG - Request cookies: {'security': 'impossible', 'PHPSESSID': 'hqvqd4q10p28jephqitddvav7s'}
+2026-03-17 14:56:50,285 - INFO - Ruleset dimuat: 10 aturan SQLi, 13 aturan XSS.
+2026-03-17 14:57:05,406 - INFO - {"timestamp": "2026-03-17T07:57:05.406145Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 1.01}
+2026-03-17 14:57:05,423 - DEBUG - Backend status: 200
+2026-03-17 14:57:05,423 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:55:23 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=f844mmmd72vrm4tg9gkrovphqt; expires=Wed, 18-Mar-2026 07:55:23 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=a5c4624ven81gq2lakf9jn6gon; expires=Wed, 18-Mar-2026 07:55:23 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:57:05,429 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'ef0ce48c2e8e48ae96e4bc2c8e2a7cc1'}
+2026-03-17 14:57:05,429 - DEBUG - Request cookies: {}
+2026-03-17 14:57:05,529 - INFO - {"timestamp": "2026-03-17T07:57:05.529930Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.982}
+2026-03-17 14:57:05,555 - DEBUG - Backend status: 404
+2026-03-17 14:57:05,573 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:55:23 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:57:05,588 - DEBUG - Request form data: {}
+2026-03-17 14:57:05,589 - DEBUG - Request cookies: {'security': 'low'}
+2026-03-17 14:57:07,825 - INFO - {"timestamp": "2026-03-17T07:57:07.825082Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.976}
+2026-03-17 14:57:07,843 - DEBUG - Backend status: 200
+2026-03-17 14:57:07,846 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:55:25 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=7c8lbeg0hhdr9ol0phmd2gbg9m; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:57:07,850 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': '592e00c21c48871229c2061b52c50ab8'}
+2026-03-17 14:57:07,856 - DEBUG - Request cookies: {'security': 'low'}
+2026-03-17 14:57:08,126 - INFO - {"timestamp": "2026-03-17T07:57:08.126655Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:57:08,145 - DEBUG - Backend status: 404
+2026-03-17 14:57:08,145 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:55:26 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:57:08,146 - DEBUG - Request form data: {}
+2026-03-17 14:57:08,147 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': '7c8lbeg0hhdr9ol0phmd2gbg9m'}
+2026-03-17 14:58:04,400 - INFO - {"timestamp": "2026-03-17T07:58:04.400784Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.975}
+2026-03-17 14:58:04,410 - DEBUG - Backend status: 200
+2026-03-17 14:58:04,411 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:56:22 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:58:04,413 - DEBUG - Request form data: {'username': 'user', 'password': 'password', 'Login': 'Login', 'user_token': '1e601f4665cd758d9f397965a27a2b30'}
+2026-03-17 14:58:04,415 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': '7c8lbeg0hhdr9ol0phmd2gbg9m'}
+2026-03-17 14:58:04,510 - INFO - {"timestamp": "2026-03-17T07:58:04.510767Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:58:04,548 - DEBUG - Backend status: 404
+2026-03-17 14:58:04,586 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:56:22 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:58:04,589 - DEBUG - Request form data: {}
+2026-03-17 14:58:04,589 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': '7c8lbeg0hhdr9ol0phmd2gbg9m'}
+2026-03-17 14:59:10,396 - INFO - {"timestamp": "2026-03-17T07:59:10.396681Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.98}
+2026-03-17 14:59:10,406 - DEBUG - Backend status: 200
+2026-03-17 14:59:10,408 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:57:28 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:59:10,409 - DEBUG - Request form data: {'username': 'user', 'password': 'password', 'Login': 'Login', 'user_token': '0c9ef91366d6fe7b5464bec9cddd6e06'}
+2026-03-17 14:59:10,409 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': '7c8lbeg0hhdr9ol0phmd2gbg9m'}
+2026-03-17 14:59:10,502 - INFO - {"timestamp": "2026-03-17T07:59:10.502668Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:59:10,515 - DEBUG - Backend status: 404
+2026-03-17 14:59:10,559 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:57:28 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:59:10,586 - DEBUG - Request form data: {}
+2026-03-17 14:59:10,589 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': '7c8lbeg0hhdr9ol0phmd2gbg9m'}
+2026-03-17 14:59:19,540 - INFO - {"timestamp": "2026-03-17T07:59:19.540730Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:59:19,554 - DEBUG - Backend status: 200
+2026-03-17 14:59:19,557 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:57:37 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 14:59:19,561 - DEBUG - Request form data: {'username': 'user', 'password': 'byn0cularDK', 'Login': 'Login', 'user_token': 'c133859d732be82faf134a5eecc03a3c'}
+2026-03-17 14:59:19,578 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': '7c8lbeg0hhdr9ol0phmd2gbg9m'}
+2026-03-17 14:59:19,850 - INFO - {"timestamp": "2026-03-17T07:59:19.849385Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 14:59:19,874 - DEBUG - Backend status: 404
+2026-03-17 14:59:19,874 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:57:38 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 14:59:19,876 - DEBUG - Request form data: {}
+2026-03-17 14:59:19,876 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': '7c8lbeg0hhdr9ol0phmd2gbg9m'}
+2026-03-17 15:00:34,028 - INFO - {"timestamp": "2026-03-17T08:00:34.028292Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.971}
+2026-03-17 15:00:34,048 - DEBUG - Backend status: 200
+2026-03-17 15:00:34,050 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:58:52 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:00:34,051 - DEBUG - Request form data: {'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': '92c44984362017f030f482454253a377'}
+2026-03-17 15:00:34,052 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': '7c8lbeg0hhdr9ol0phmd2gbg9m'}
+2026-03-17 15:00:34,144 - INFO - {"timestamp": "2026-03-17T08:00:34.144784Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 15:00:34,158 - DEBUG - Backend status: 404
+2026-03-17 15:00:34,221 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:58:52 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 15:00:34,223 - DEBUG - Request form data: {}
+2026-03-17 15:00:34,224 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': '7c8lbeg0hhdr9ol0phmd2gbg9m'}
+2026-03-17 15:00:44,576 - INFO - {"timestamp": "2026-03-17T08:00:44.576129Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.982}
+2026-03-17 15:00:44,603 - DEBUG - Backend status: 200
+2026-03-17 15:00:44,603 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:59:02 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=h6glrvgtv549ciq2uefiffm5fo; expires=Wed, 18-Mar-2026 07:59:02 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=erpn1csmnfsv14sl4sf5iikuv9; expires=Wed, 18-Mar-2026 07:59:02 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:00:44,609 - DEBUG - Request form data: {'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': '424421d13be54a1456780dd22c2293fc'}
+2026-03-17 15:00:44,610 - DEBUG - Request cookies: {}
+2026-03-17 15:00:44,877 - INFO - {"timestamp": "2026-03-17T08:00:44.877338Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 15:00:44,886 - DEBUG - Backend status: 404
+2026-03-17 15:00:44,889 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:59:03 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 15:00:44,893 - DEBUG - Request form data: {}
+2026-03-17 15:00:44,895 - DEBUG - Request cookies: {'security': 'low'}
+2026-03-17 15:00:52,138 - INFO - {"timestamp": "2026-03-17T08:00:52.138228Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.976}
+2026-03-17 15:00:52,161 - DEBUG - Backend status: 200
+2026-03-17 15:00:52,161 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:59:10 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=puil7eocqekbp17j3n7c58h40b; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:00:52,162 - DEBUG - Request form data: {'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': 'aeb11c4ede27c366fe5a678d21d2a343'}
+2026-03-17 15:00:52,163 - DEBUG - Request cookies: {'security': 'low'}
+2026-03-17 15:00:52,277 - INFO - {"timestamp": "2026-03-17T08:00:52.277982Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/.well-known/appspecific/com.chrome.devtools.json", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.975}
+2026-03-17 15:00:52,344 - DEBUG - Backend status: 404
+2026-03-17 15:00:52,446 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 07:59:10 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Content-Length': '275', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=iso-8859-1'}
+2026-03-17 15:00:52,492 - DEBUG - Request form data: {}
+2026-03-17 15:00:52,517 - DEBUG - Request cookies: {'security': 'low', 'PHPSESSID': 'puil7eocqekbp17j3n7c58h40b'}
+2026-03-17 15:01:59,530 - INFO - {"timestamp": "2026-03-17T08:01:59.530531Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 1.022}
+2026-03-17 15:01:59,541 - DEBUG - Backend status: 200
+2026-03-17 15:01:59,541 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:00:17 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=5kq2tfrkn6r6na0r0phqb2d8aj; expires=Wed, 18-Mar-2026 08:00:17 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=575gl4nn6ho3tkcvs5ckfkcuid; expires=Wed, 18-Mar-2026 08:00:17 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:01:59,545 - DEBUG - Request form data: {}
+2026-03-17 15:01:59,545 - DEBUG - Request cookies: {}
+2026-03-17 15:03:36,725 - INFO - {"timestamp": "2026-03-17T08:03:36.725209Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.976}
+2026-03-17 15:03:36,754 - DEBUG - Backend status: 200
+2026-03-17 15:03:36,756 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:01:55 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=m4md953ro11lp03eq0cqonf9g1; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:03:36,758 - DEBUG - Request form data: {'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': '4e63b8bd2b875f38bf98dfe94d66be41'}
+2026-03-17 15:03:36,759 - DEBUG - Request cookies: {'security': 'low'}
+2026-03-17 15:04:41,168 - INFO - {"timestamp": "2026-03-17T08:04:41.168031Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.965}
+2026-03-17 15:04:41,178 - DEBUG - Backend status: 200
+2026-03-17 15:04:41,179 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:02:59 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:04:41,180 - DEBUG - Request form data: {'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': '4e63b8bd2b875f38bf98dfe94d66be41'}
+2026-03-17 15:04:41,180 - DEBUG - Request cookies: {'PHPSESSID': 'm4md953ro11lp03eq0cqonf9g1', 'security': 'low'}
+2026-03-17 15:05:42,602 - INFO - {"timestamp": "2026-03-17T08:05:42.602110Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 15:05:42,623 - DEBUG - Backend status: 200
+2026-03-17 15:05:42,623 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:04:00 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:05:42,625 - DEBUG - Request form data: {}
+2026-03-17 15:05:42,626 - DEBUG - Request cookies: {'PHPSESSID': 'm4md953ro11lp03eq0cqonf9g1', 'security': 'low'}
+2026-03-17 15:07:13,253 - INFO - {"timestamp": "2026-03-17T08:07:13.253451Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.977}
+2026-03-17 15:07:13,269 - DEBUG - Backend status: 200
+2026-03-17 15:07:13,271 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:05:31 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:07:13,273 - DEBUG - Request form data: {'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': 'bb0dac6cc5c37108710bb88e40080de7'}
+2026-03-17 15:07:13,275 - DEBUG - Request cookies: {'PHPSESSID': 'm4md953ro11lp03eq0cqonf9g1', 'security': 'low'}
+2026-03-17 15:10:18,566 - INFO - {"timestamp": "2026-03-17T08:10:18.565066Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 15:10:18,584 - DEBUG - Backend status: 200
+2026-03-17 15:10:18,585 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:08:37 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:10:18,585 - DEBUG - Request form data: {}
+2026-03-17 15:10:18,586 - DEBUG - Request cookies: {'PHPSESSID': 'm4md953ro11lp03eq0cqonf9g1', 'security': 'low'}
+2026-03-17 15:10:32,244 - INFO - {"timestamp": "2026-03-17T08:10:32.244423Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.975}
+2026-03-17 15:10:32,254 - DEBUG - Backend status: 200
+2026-03-17 15:10:32,254 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:08:50 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:10:32,256 - DEBUG - Request form data: {'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': 'c36af15186b9f7ea2cab3f2fc99071bc'}
+2026-03-17 15:10:32,256 - DEBUG - Request cookies: {'PHPSESSID': 'm4md953ro11lp03eq0cqonf9g1', 'security': 'low'}
+2026-03-17 15:11:56,758 - INFO - {"timestamp": "2026-03-17T08:11:56.758276Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 15:11:56,765 - DEBUG - Backend status: 200
+2026-03-17 15:11:56,766 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:10:15 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:11:56,767 - DEBUG - Request form data: {}
+2026-03-17 15:11:56,768 - DEBUG - Request cookies: {'PHPSESSID': 'm4md953ro11lp03eq0cqonf9g1', 'security': 'low'}
+2026-03-17 15:12:08,373 - INFO - {"timestamp": "2026-03-17T08:12:08.373171Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.973}
+2026-03-17 15:12:08,392 - DEBUG - Backend status: 200
+2026-03-17 15:12:08,399 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:10:26 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:12:08,406 - DEBUG - Request form data: {'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': 'ce79bb439e114194eb3955367fa7c810'}
+2026-03-17 15:12:08,412 - DEBUG - Request cookies: {'PHPSESSID': 'm4md953ro11lp03eq0cqonf9g1', 'security': 'low'}
+2026-03-17 15:13:38,461 - INFO - {"timestamp": "2026-03-17T08:13:38.461816Z", "src_ip": "127.0.0.1", "method": "GET", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.0}
+2026-03-17 15:13:38,479 - DEBUG - Backend status: 200
+2026-03-17 15:13:38,480 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:11:57 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'security=impossible; path=/; HttpOnly, PHPSESSID=0cig8hrcld3mkit268dkm0d35u; expires=Wed, 18-Mar-2026 08:11:57 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict, PHPSESSID=pac72b7523s6h271s89f9d7p2d; expires=Wed, 18-Mar-2026 08:11:57 GMT; Max-Age=86400; path=/; HttpOnly; SameSite=Strict', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:13:38,484 - DEBUG - Request form data: {}
+2026-03-17 15:13:38,486 - DEBUG - Request cookies: {}
+2026-03-17 15:13:49,422 - INFO - {"timestamp": "2026-03-17T08:13:49.422146Z", "src_ip": "127.0.0.1", "method": "POST", "uri": "/DVWA/login.php", "triggered_rules": [], "total_score": 0, "decision": "allowed", "latency_ms": 0.977}
+2026-03-17 15:13:49,454 - DEBUG - Backend status: 200
+2026-03-17 15:13:49,456 - DEBUG - Backend headers: {'Date': 'Tue, 17 Mar 2026 08:12:08 GMT', 'Server': 'Apache/2.4.52 (Ubuntu)', 'Set-Cookie': 'PHPSESSID=hlnckfqa7aclvud1s1lkf0u3pr; path=/', 'Expires': 'Tue, 23 Jun 2009 12:00:00 GMT', 'Cache-Control': 'no-cache, must-revalidate', 'Pragma': 'no-cache', 'Vary': 'Accept-Encoding', 'Content-Length': '1342', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html;charset=utf-8'}
+2026-03-17 15:13:49,462 - DEBUG - Request form data: {'username': 'admin', 'password': 'password', 'Login': 'Login', 'user_token': 'f8a37aa12591a70267bc967ec845d354'}
+2026-03-17 15:13:49,465 - DEBUG - Request cookies: {'security': 'low'}

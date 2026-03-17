@@ -13,16 +13,23 @@ def forward_request(original_request, backend_host: str, backend_port: int):
     # salin headers tapi hapus header yang bisa konflik
     headers = {
         k: v for k, v in original_request.headers.items()
-        if k.lower() not in ["host", "content-length", "transfer-encoding"]
+        if k.lower() not in ["host", "content-length", "transfer-encoding",
+                              "accept-encoding"]
     }
+    # nonaktifkan kompresi supaya response bisa dibaca langsung
+    headers["Accept-Encoding"] = "identity"
 
     try:
+        # gabungkan cookie dari header dan dari request.cookies
+        cookie_header = original_request.headers.get("Cookie", "")
+        if cookie_header:
+            headers["Cookie"] = cookie_header
+
         response = requests.request(
             method=original_request.method,
             url=url,
             headers=headers,
             data=original_request.get_data(),
-            cookies=original_request.cookies,
             allow_redirects=False,
             timeout=10
         )
