@@ -48,6 +48,9 @@ def create_app(config_path: str = "config/config.yaml") -> Flask:
     def waf_handler(path):
         start_time = time.time()
 
+        # simpan body request sebelum diproses
+        request_data = request.get_data()
+        
         # ekstrak bagian-bagian permintaan
         extracted = analyze_request(request)
 
@@ -81,7 +84,7 @@ def create_app(config_path: str = "config/config.yaml") -> Flask:
             )
 
         # teruskan ke backend jika diizinkan
-        result = forward_request(request, backend_host, backend_port)
+        result = forward_request(request, backend_host, backend_port, request_data)
 
         # debug sementara
         logger.debug(f"Backend status: {result['status_code']}")
@@ -110,18 +113,23 @@ def create_app(config_path: str = "config/config.yaml") -> Flask:
             )
 
         resp = make_response(result["content"], result["status_code"])
+        import re
         for k, v in response_headers.items():
             if k.lower() == "set-cookie":
-                # hapus SameSite supaya cookie bisa diterima browser
-                v = v.replace("; SameSite=Strict", "")
-                v = v.replace("; SameSite=Lax", "")
-                # paksa security level ke low
-                if "security=" in v:
-                    import re
-                    v = re.sub(r"security=\w+", "security=low", v)
-                resp.headers.add(k, v)
+                # split multiple cookies yang digabung dalam satu header
+                cookies = re.split(r',\s*(?=[a-zA-Z]+=)', v)
+                for cookie in cookies:
+                    cookie = cookie.replace("; SameSite=Strict", "")
+                    cookie = cookie.replace("; SameSite=Lax", "")
+                    if "security=" in cookie:
+                        cookie = re.sub(r"security=\w+", "security=low", cookie)
+                    resp.headers.add("Set-Cookie", cookie)
             else:
                 resp.headers[k] = v
+
+        # debug cookie yang dikirim ke browser
+        logger.debug(f"Response cookies sent to browser: {resp.headers.getlist('Set-Cookie')}")
+        
         return resp
 
     return app
