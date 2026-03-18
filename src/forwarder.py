@@ -19,12 +19,6 @@ def forward_request(original_request, backend_host: str, backend_port: int, requ
         headers["Cookie"] = cookie_header
 
     try:
-        # debug - log apa yang dikirim ke backend
-        import logging
-        fwd_logger = logging.getLogger("python_waf")
-        fwd_logger.debug(f"Forwarding to: {url}")
-        fwd_logger.debug(f"Forwarding headers: {headers}")
-        fwd_logger.debug(f"Forwarding data: {original_request.get_data()}")
         
         response = requests.request(
             method=original_request.method,

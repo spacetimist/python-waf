@@ -86,12 +86,6 @@ def create_app(config_path: str = "config/config.yaml") -> Flask:
         # teruskan ke backend jika diizinkan
         result = forward_request(request, backend_host, backend_port, request_data)
 
-        # debug sementara
-        logger.debug(f"Backend status: {result['status_code']}")
-        logger.debug(f"Backend headers: {result['headers']}")
-        logger.debug(f"Request form data: {dict(request.form)}")
-        logger.debug(f"Request cookies: {dict(request.cookies)}")
-
         # buang header yang bisa konflik sebelum dikembalikan ke client
         excluded_headers = [
         "content-encoding", "transfer-encoding",

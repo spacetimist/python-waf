@@ -16,4 +16,4 @@ rules:
 
 logging:
   path: "logs/waf.log"
-  level: "DEBUG"
+  level: "INFO"
