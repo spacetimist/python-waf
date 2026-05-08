@@ -165,3 +165,38 @@ rules:
     severity: "critical"
     score: 5
     tags: ["xss", "attribute-injection", "crs-941210"]
+    
+  # rules tambahan setelah testing 1
+    
+  - id: "XSS-014"
+    description: "Deteksi alert() dan fungsi JavaScript berbahaya tanpa tag script"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "alert\\s*\\(|confirm\\s*\\(|prompt\\s*\\("
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "js-alert", "crs-941100"]
+
+  - id: "XSS-015"
+    description: "Deteksi tag HTML umum untuk injeksi konten"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\s*(h[1-6]|p|div|span|marquee|button)[\\s>/]"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 5
+    tags: ["xss", "html-injection", "crs-941110"]
+
+  - id: "XSS-016"
+    description: "Deteksi event handler pada tag marquee dan elemen animasi"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(marquee|button|form).*on(start|finish|formchange)\\s*="
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "event-handler", "crs-941120"]

@@ -129,6 +129,8 @@ rules:
     score: 5
     tags: ["sqli", "stacked-queries", "crs-942200"]
     
+  # rules tambahan setelah analisis payload lolos pada testing pertama  
+    
   - id: "SQLI-011"
     description: "Deteksi ORDER BY untuk column enumeration dalam SQLi"
     phase: 2
@@ -139,3 +141,36 @@ rules:
     severity: "high"
     score: 5
     tags: ["sqli", "order-by", "crs-942100"]
+  
+  - id: "SQLI-012"
+    description: "Deteksi karakter khusus SQL untuk authentication bypass"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "'\\s*([-&^*]|or\\s+')"
+    transform: ["lowercase", "url_decode"]
+    severity: "high"
+    score: 5
+    tags: ["sqli", "auth-bypass", "crs-942160"]
+
+  - id: "SQLI-013"
+    description: "Deteksi admin bypass dengan komentar SQL"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\w+'\\s*(--|#|/\\*)"
+    transform: ["lowercase", "url_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "auth-bypass", "crs-942160"]
+
+  - id: "SQLI-014"
+    description: "Deteksi OR true untuk authentication bypass"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\bor\\s+true\\b"
+    transform: ["lowercase", "url_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "auth-bypass", "crs-942160"]
