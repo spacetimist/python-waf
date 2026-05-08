@@ -128,3 +128,14 @@ rules:
     severity: "critical"
     score: 5
     tags: ["sqli", "stacked-queries", "crs-942200"]
+    
+    - id: "SQLI-011"
+    description: "Deteksi ORDER BY untuk column enumeration dalam SQLi"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\border\\s+by\\s+\\d+"
+    transform: ["lowercase", "url_decode"]
+    severity: "high"
+    score: 5
+    tags: ["sqli", "order-by", "crs-942100"]
