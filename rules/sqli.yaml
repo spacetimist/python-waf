@@ -129,7 +129,7 @@ rules:
     score: 5
     tags: ["sqli", "stacked-queries", "crs-942200"]
     
-    - id: "SQLI-011"
+  - id: "SQLI-011"
     description: "Deteksi ORDER BY untuk column enumeration dalam SQLi"
     phase: 2
     target: ["args", "form", "body", "query_string"]
