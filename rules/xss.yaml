@@ -1,7 +1,7 @@
 rules:
   # ==========================================
   # KATEGORI 1: Tag HTML Berbahaya
-  # Referensi CRS: 941100, 941110
+  # Referensi: inspired-by-crs-941160
   # ==========================================
   - id: "XSS-001"
     description: "Deteksi tag script yang umum digunakan untuk XSS"
@@ -12,7 +12,7 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "critical"
     score: 5
-    tags: ["xss", "script-tag", "crs-941100"]
+    tags: ["xss", "script-tag", "inspired-by-crs-941160"]
 
   - id: "XSS-002"
     description: "Deteksi tag HTML berbahaya (iframe, object, embed, applet)"
@@ -23,7 +23,7 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "critical"
     score: 5
-    tags: ["xss", "dangerous-tags", "crs-941110"]
+    tags: ["xss", "dangerous-tags", "inspired-by-crs-941160"]
 
   - id: "XSS-003"
     description: "Deteksi tag penutup script"
@@ -34,11 +34,11 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "high"
     score: 3
-    tags: ["xss", "script-tag", "crs-941100"]
+    tags: ["xss", "script-tag", "inspired-by-crs-941160"]
 
   # ==========================================
   # KATEGORI 2: Event Handler JavaScript
-  # Referensi CRS: 941120, 941130
+  # Referensi: inspired-by-crs-941160
   # ==========================================
   - id: "XSS-004"
     description: "Deteksi event handler JavaScript (onload, onerror, onclick, dll)"
@@ -49,7 +49,7 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "critical"
     score: 5
-    tags: ["xss", "event-handler", "crs-941120"]
+    tags: ["xss", "event-handler", "inspired-by-crs-941160"]
 
   - id: "XSS-005"
     description: "Deteksi event handler lanjutan (onmouseenter, onanimation, dll)"
@@ -60,11 +60,11 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "high"
     score: 3
-    tags: ["xss", "event-handler", "crs-941130"]
+    tags: ["xss", "event-handler", "inspired-by-crs-941160"]
 
   # ==========================================
   # KATEGORI 3: Protokol JavaScript
-  # Referensi CRS: 941140, 941150
+  # Referensi: inspired-by-crs-941170
   # ==========================================
   - id: "XSS-006"
     description: "Deteksi protokol javascript: dalam atribut href atau src"
@@ -75,7 +75,7 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode", "remove_whitespace"]
     severity: "critical"
     score: 5
-    tags: ["xss", "javascript-protocol", "crs-941140"]
+    tags: ["xss", "javascript-protocol", "inspired-by-crs-941170"]
 
   - id: "XSS-007"
     description: "Deteksi protokol vbscript dan data URI berbahaya"
@@ -86,11 +86,11 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode", "remove_whitespace"]
     severity: "critical"
     score: 5
-    tags: ["xss", "dangerous-protocol", "crs-941150"]
+    tags: ["xss", "dangerous-protocol", "inspired-by-crs-941170"]
 
   # ==========================================
   # KATEGORI 4: Encoding XSS
-  # Referensi CRS: 941160, 941170
+  # Referensi: inspired-by-crs-941160, inspired-by-crs-941170
   # ==========================================
   - id: "XSS-008"
     description: "Deteksi HTML entity encoding untuk bypass filter (<, >)"
@@ -101,7 +101,7 @@ rules:
     transform: ["lowercase", "html_decode"]
     severity: "high"
     score: 3
-    tags: ["xss", "encoding-bypass", "crs-941160"]
+    tags: ["xss", "encoding-bypass", "inspired-by-crs-941160"]
 
   - id: "XSS-009"
     description: "Deteksi Unicode encoding untuk bypass filter"
@@ -112,11 +112,10 @@ rules:
     transform: ["lowercase", "url_decode"]
     severity: "high"
     score: 3
-    tags: ["xss", "unicode-bypass", "crs-941170"]
+    tags: ["xss", "unicode-bypass", "custom"]
 
   # ==========================================
   # KATEGORI 5: DOM-based XSS
-  # Referensi CRS: 941180, 941190
   # ==========================================
   - id: "XSS-010"
     description: "Deteksi manipulasi DOM yang berbahaya"
@@ -127,7 +126,7 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "critical"
     score: 5
-    tags: ["xss", "dom-xss", "crs-941180"]
+    tags: ["xss", "dom-xss", "custom"]
 
   - id: "XSS-011"
     description: "Deteksi eval dan fungsi eksekusi JavaScript berbahaya"
@@ -138,11 +137,11 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "critical"
     score: 5
-    tags: ["xss", "js-execution", "crs-941190"]
+    tags: ["xss", "js-execution", "custom"]
 
   # ==========================================
   # KATEGORI 6: Polyglot XSS
-  # Referensi CRS: 941200, 941210
+  # Referensi: inspired-by-crs-941170
   # ==========================================
   - id: "XSS-012"
     description: "Deteksi payload polyglot XSS yang umum digunakan"
@@ -153,7 +152,7 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "critical"
     score: 5
-    tags: ["xss", "polyglot", "crs-941200"]
+    tags: ["xss", "polyglot", "custom"]
 
   - id: "XSS-013"
     description: "Deteksi XSS melalui atribut src dan href yang berbahaya"
@@ -164,10 +163,11 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "critical"
     score: 5
-    tags: ["xss", "attribute-injection", "crs-941210"]
-    
-  # rules tambahan setelah testing 1
-    
+    tags: ["xss", "attribute-injection", "inspired-by-crs-941170"]
+
+  # ==========================================
+  # KATEGORI 7: Aturan Tambahan dari Analisis Payload
+  # ==========================================
   - id: "XSS-014"
     description: "Deteksi alert() dan fungsi JavaScript berbahaya tanpa tag script"
     phase: 2
@@ -177,7 +177,7 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "critical"
     score: 5
-    tags: ["xss", "js-alert", "crs-941100"]
+    tags: ["xss", "js-alert", "custom"]
 
   - id: "XSS-015"
     description: "Deteksi tag HTML umum untuk injeksi konten"
@@ -188,7 +188,7 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "high"
     score: 5
-    tags: ["xss", "html-injection", "crs-941110"]
+    tags: ["xss", "html-injection", "inspired-by-crs-941160"]
 
   - id: "XSS-016"
     description: "Deteksi event handler pada tag marquee dan elemen animasi"
@@ -199,4 +199,59 @@ rules:
     transform: ["lowercase", "url_decode", "html_decode"]
     severity: "critical"
     score: 5
-    tags: ["xss", "event-handler", "crs-941120"]
+    tags: ["xss", "event-handler", "inspired-by-crs-941160"]
+
+  - id: "XSS-017"
+    description: "Deteksi XSS attribute vector (xlink:href, @import, base64, formaction)"
+    phase: 2
+    target: ["args", "form", "body", "query_string", "headers"]
+    operator: "regex"
+    pattern: "(?:xlink:href|data:text/html|@import|;base64|formaction)"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "attribute-vector", "inspired-by-crs-941170"]
+
+  - id: "XSS-018"
+    description: "Deteksi javascript dengan HTML entity encoding"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "j(?:&#[0-9a-fx]+;?)*a(?:&#[0-9a-fx]+;?)*v(?:&#[0-9a-fx]+;?)*a(?:&#[0-9a-fx]+;?)*s(?:&#[0-9a-fx]+;?)*c(?:&#[0-9a-fx]+;?)*r(?:&#[0-9a-fx]+;?)*i(?:&#[0-9a-fx]+;?)*p(?:&#[0-9a-fx]+;?)*t(?:&#[0-9a-fx]+;?)*:"
+    transform: ["lowercase", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "js-encoding", "inspired-by-crs-941210"]
+
+  - id: "XSS-019"
+    description: "Deteksi tag HTML jarang untuk XSS (layer, ilayer, xml, embed)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\s*(?:layer|ilayer|xml\\s+src|isindex|listing|plaintext|xmp)[\\s>]"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 5
+    tags: ["xss", "rare-tags", "inspired-by-crs-941160"]
+
+  - id: "XSS-020"
+    description: "Deteksi SVG dan namespace XML untuk XSS"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\s*svg[\\s>/]|xmlns\\s*:|xlink:|<\\s*(?:feimage|fescript|animate)[\\s>/]"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 5
+    tags: ["xss", "svg-xss", "inspired-by-crs-941130"]
+
+  - id: "XSS-021"
+    description: "Deteksi CSS expression dan behavior untuk XSS"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(?:expression\\s*\\(|behavior\\s*:\\s*url|binding\\s*:\\s*url|-moz-binding)"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["xss", "css-xss", "inspired-by-crs-941170"]
