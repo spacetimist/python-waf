@@ -255,3 +255,106 @@ rules:
     severity: "critical"
     score: 5
     tags: ["xss", "css-xss", "inspired-by-crs-941170"]
+
+  # ==========================================
+  # RULES CUSTOM TAMBAHAN
+  # Berdasarkan analisis payload yang lolos pengujian
+  # ==========================================
+  - id: "XSS-022"
+    description: "Deteksi encoding karakter < tanpa konteks keyword (percent, entity, decimal)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(%3c|&lt;?|&LT;?|&#0*60;?|&#x0*3c;?)"
+    transform: ["lowercase"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "encoding-bypass", "custom"]
+
+  - id: "XSS-023"
+    description: "Deteksi UTF-7 encoding untuk XSS bypass"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\+ADw-|\\+AFs-|\\+ACo-|\\+AGg-"
+    transform: []
+    severity: "critical"
+    score: 5
+    tags: ["xss", "utf7-bypass", "custom"]
+
+  - id: "XSS-024"
+    description: "Deteksi tag LINK, XML, import namespace untuk XSS"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\s*(link|xml|import|namespace)\\b"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "rare-tags", "custom"]
+
+  - id: "XSS-025"
+    description: "Deteksi processing instruction XML berbahaya"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\?\\s*(xml|import|php)"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "xml-injection", "custom"]
+
+  - id: "XSS-026"
+    description: "Deteksi atribut datasrc dan datafld untuk injeksi data IE"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(datasrc|datafld|dataformatas)\\s*="
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "ie-injection", "custom"]
+
+  - id: "XSS-027"
+    description: "Deteksi Base64 encoded payload SVG atau script"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(svg|script|javascript|alert|onerror)"
+    transform: ["url_decode", "base64_decode", "lowercase"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "base64-bypass", "custom"]
+
+  - id: "XSS-028"
+    description: "Deteksi SVG namespace dan elemen SVG lanjutan"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\s*svg\\s*:|<\\s*svg:(svg|rect|circle|script|animate)[\\s>/]"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "svg-namespace", "custom"]
+
+  - id: "XSS-029"
+    description: "Deteksi tag style standalone dan font-face injection"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "<\\s*style[\\s>]|@font-face|@import\\s"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "css-injection", "custom"]
+
+  - id: "XSS-030"
+    description: "Deteksi assignment location dan jQuery click untuk XSS"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "(location\\s*=\\s*[\"']?http|\\.click\\s*\\(|\\$\\s*\\()"
+    transform: ["lowercase", "url_decode", "html_decode"]
+    severity: "high"
+    score: 3
+    tags: ["xss", "js-redirect", "custom"]

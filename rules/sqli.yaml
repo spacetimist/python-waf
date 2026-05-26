@@ -175,3 +175,95 @@ rules:
     severity: "critical"
     score: 5
     tags: ["sqli", "auth-bypass", "inspired-by-crs-942130"]
+    
+  # ==========================================
+  # RULES CUSTOM TAMBAHAN
+  # Berdasarkan analisis payload yang lolos pengujian
+  # ==========================================
+  - id: "SQLI-015"
+    description: "Deteksi admin bypass dengan kutip ganda dan komentar SQL"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\w+\"\\s*(--|#|/\\*)"
+    transform: ["lowercase", "url_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "auth-bypass", "custom"]
+
+  - id: "SQLI-016"
+    description: "Deteksi kutip ganda diikuti komentar SQL (tanpa prefix kata)"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\"\\s*(--|#|/\\*)"
+    transform: ["url_decode"]
+    severity: "high"
+    score: 5
+    tags: ["sqli", "auth-bypass", "custom"]
+
+  - id: "SQLI-017"
+    description: "Deteksi kutip tunggal diikuti komentar SQL tanpa prefix"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "'\\s*(--|#|/\\*|–)"
+    transform: ["url_decode"]
+    severity: "high"
+    score: 5
+    tags: ["sqli", "auth-bypass", "custom"]
+
+  - id: "SQLI-018"
+    description: "Deteksi OR injection dengan kutip ganda (\" or \"\")"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\"\\s*or\\s+\""
+    transform: ["lowercase", "url_decode"]
+    severity: "critical"
+    score: 5
+    tags: ["sqli", "auth-bypass", "custom"]
+
+  - id: "SQLI-019"
+    description: "Deteksi LIKE injection untuk blind SQLi"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\blike\\s+'[^']*'"
+    transform: ["lowercase", "url_decode"]
+    severity: "high"
+    score: 5
+    tags: ["sqli", "like-injection", "custom"]
+
+  - id: "SQLI-020"
+    description: "Deteksi XPath injection menggunakan substring"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\bsubstring\\s*\\(|\\bstring-length\\s*\\(|\\bcount\\s*\\("
+    transform: ["lowercase", "url_decode"]
+    severity: "high"
+    score: 5
+    tags: ["sqli", "xpath-injection", "custom"]
+
+  - id: "SQLI-021"
+    description: "Deteksi karakter operator tunggal dalam kutip untuk bypass"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\"\\s*[-&^*]\\s*\"|'\\s*[-&^*]\\s*'"
+    transform: ["url_decode"]
+    severity: "high"
+    score: 5
+    tags: ["sqli", "auth-bypass", "custom"]
+
+  - id: "SQLI-022"
+    description: "Deteksi escape sequence untuk SQL injection bypass"
+    phase: 2
+    target: ["args", "form", "body", "query_string"]
+    operator: "regex"
+    pattern: "\\\\'\\s*(=|or|and)"
+    transform: ["lowercase", "url_decode"]
+    severity: "high"
+    score: 5
+    tags: ["sqli", "escape-bypass", "custom"]

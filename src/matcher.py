@@ -1,6 +1,7 @@
 import re
 import urllib.parse
 import html
+import base64
 
 def apply_transform(value: str, transforms: list) -> str:
     """
@@ -16,6 +17,25 @@ def apply_transform(value: str, transforms: list) -> str:
             value = html.unescape(value)
         elif transform == "remove_whitespace":
             value = re.sub(r"\s+", "", value)
+        elif transform == "base64_decode":
+            try:
+                if '=' in value and not value.startswith('PH'):
+                    parts = value.split('=', 1)
+                    if len(parts) > 1:
+                        value = parts[1]
+                value = value.replace(' ', '+')
+                clean = re.sub(r'[^A-Za-z0-9+/=]', '', value)
+                if len(clean) < 20:
+                    pass
+                else:
+                    padding = 4 - len(clean) % 4
+                    if padding != 4:
+                        clean += "=" * padding
+                    decoded = base64.b64decode(clean).decode("utf-8", errors="ignore")
+                    value = decoded
+            except Exception as e:
+                print(f"[DEBUG] error={e}")
+                pass
     return value
 
 
