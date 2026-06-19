@@ -186,7 +186,7 @@ rules:
     operator: "regex"
     pattern: "<\\s*(h[1-6]|p|div|span|marquee|button)[\\s>/]"
     transform: ["lowercase", "url_decode", "html_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["xss", "html-injection", "inspired-by-crs-941160"]
 
@@ -230,7 +230,7 @@ rules:
     operator: "regex"
     pattern: "<\\s*(?:layer|ilayer|xml\\s+src|isindex|listing|plaintext|xmp)[\\s>]"
     transform: ["lowercase", "url_decode", "html_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["xss", "rare-tags", "inspired-by-crs-941160"]
 
@@ -241,7 +241,7 @@ rules:
     operator: "regex"
     pattern: "<\\s*svg[\\s>/]|xmlns\\s*:|xlink:|<\\s*(?:feimage|fescript|animate)[\\s>/]"
     transform: ["lowercase", "url_decode", "html_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["xss", "svg-xss", "inspired-by-crs-941130"]
 
