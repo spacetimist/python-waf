@@ -139,7 +139,7 @@ rules:
     operator: "regex"
     pattern: "\\border\\s+by\\s+\\d+"
     transform: ["lowercase", "url_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["sqli", "order-by", "custom"]
 
@@ -150,7 +150,7 @@ rules:
     operator: "regex"
     pattern: "'\\s*([-&^*]|or\\s+')"
     transform: ["lowercase", "url_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["sqli", "auth-bypass", "inspired-by-crs-942180"]
 
@@ -198,7 +198,7 @@ rules:
     operator: "regex"
     pattern: "\"\\s*(--|#|/\\*)"
     transform: ["url_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["sqli", "auth-bypass", "custom"]
 
@@ -209,7 +209,7 @@ rules:
     operator: "regex"
     pattern: "'\\s*(--|#|/\\*|–)"
     transform: ["url_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["sqli", "auth-bypass", "custom"]
 
@@ -231,7 +231,7 @@ rules:
     operator: "regex"
     pattern: "\\blike\\s+'[^']*'"
     transform: ["lowercase", "url_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["sqli", "like-injection", "custom"]
 
@@ -242,7 +242,7 @@ rules:
     operator: "regex"
     pattern: "\\bsubstring\\s*\\(|\\bstring-length\\s*\\(|\\bcount\\s*\\("
     transform: ["lowercase", "url_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["sqli", "xpath-injection", "custom"]
 
@@ -253,7 +253,7 @@ rules:
     operator: "regex"
     pattern: "\"\\s*[-&^*]\\s*\"|'\\s*[-&^*]\\s*'"
     transform: ["url_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["sqli", "auth-bypass", "custom"]
 
@@ -264,6 +264,6 @@ rules:
     operator: "regex"
     pattern: "\\\\'\\s*(=|or|and)"
     transform: ["lowercase", "url_decode"]
-    severity: "high"
+    severity: "critical"
     score: 5
     tags: ["sqli", "escape-bypass", "custom"]
